@@ -13,9 +13,9 @@ class Monitor {
 
     public void compare(Monitor monitor) {
         if (this.dimensions > monitor.dimensions) {
-            System.out.println("The first monitor has higher dimensions: " + this.dimensions + " > " + monitor.dimensions);
+            System.out.println("The first monitor has a higher dimension: " + this.dimensions + " > " + monitor.dimensions);
         } else {
-            System.out.println("The second monitor has higher dimensions: " + monitor.dimensions + " > " + this.dimensions);
+            System.out.println("The second monitor has a higher dimension: " + monitor.dimensions + " > " + this.dimensions);
         }
 
         System.out.println("The first monitor has a " + this.resolution + ", while the second one - " + monitor.resolution);
@@ -25,9 +25,12 @@ class Monitor {
 
 public class Task1 {
     public static void main(String[] args) {
-        Monitor monitor = new Monitor(23.8f, "Full HD", "Black");
+        Monitor monitor1 = new Monitor(23.8f, "Full HD", "Black");
         Monitor monitor2 = new Monitor(20.0f, "Full HD", "White");
 
-        monitor.compare(monitor2);
+        monitor1.color = "Grey";
+        monitor1.dimensions = 24.0f;
+
+        monitor1.compare(monitor2);
     }
 }

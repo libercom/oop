@@ -79,11 +79,11 @@ class Queue <T> {
             this.first = node;
             this.last = this.first;
             this.size++;
+        } else {
+            last.next = node;
+            last = last.next;
+            this.size++;
         }
-
-        last.next = node;
-        last = last.next;
-        this.size++;
     }
 
     public T pop() {
